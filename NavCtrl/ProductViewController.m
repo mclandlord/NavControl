@@ -38,10 +38,16 @@
     
     [super viewWillAppear:animated];
     
-    if ([self.title isEqualToString:@"Apple mobile devices"]) {
+    if ([self.title isEqualToString:@"Apple products"]) {
         self.products = @[@"iPad", @"iPod Touch",@"iPhone"];
-    } else {
-        self.products = @[@"Galaxy S4", @"Galaxy Note", @"Galaxy Tab"];
+    } else if ([self.title isEqualToString:@"Twitter products"]) {
+            self.products = @[@"TweetDeck", @"Uber Twitter",@"Twitter Alerts"];
+    }else if ([self.title isEqualToString:@"Tesla products"]) {
+            self.products = @[@"Model S", @"Model X",@"Model 3"];
+    
+    }else if ([self.title isEqualToString:@"Google products"]) {
+        self.products = @[@"Google Maps", @"Google Adwords",@"Gmail"];
+    
     }
     [self.tableView reloadData];
 }
@@ -65,7 +71,8 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.products count];
+    return 3;
+    //return [self.products count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
