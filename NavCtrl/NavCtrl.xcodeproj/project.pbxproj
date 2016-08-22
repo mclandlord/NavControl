@@ -23,6 +23,28 @@
 		48A656E718163C1B00746D36 /* CompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A656E518163C1B00746D36 /* CompanyViewController.xib */; };
 		48A656EB18163F8700746D36 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A656E918163F8700746D36 /* ProductViewController.m */; };
 		48A656EE1816468000746D36 /* Sunflower.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48A656ED1816468000746D36 /* Sunflower.gif */; };
+		AA7869311D6B8A7900FCD9AC /* appleipad.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA7869211D6B8A7900FCD9AC /* appleipad.gif */; };
+		AA7869321D6B8A7900FCD9AC /* appleiphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7869221D6B8A7900FCD9AC /* appleiphone.jpg */; };
+		AA7869331D6B8A7900FCD9AC /* appleipodtouch.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA7869231D6B8A7900FCD9AC /* appleipodtouch.gif */; };
+		AA7869341D6B8A7900FCD9AC /* google_gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869241D6B8A7900FCD9AC /* google_gmail.png */; };
+		AA7869351D6B8A7900FCD9AC /* Google_Maps_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869251D6B8A7900FCD9AC /* Google_Maps_Icon.png */; };
+		AA7869361D6B8A7900FCD9AC /* google-adwords-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869261D6B8A7900FCD9AC /* google-adwords-logo.png */; };
+		AA7869371D6B8A7900FCD9AC /* img-Product-01.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869271D6B8A7900FCD9AC /* img-Product-01.png */; };
+		AA7869381D6B8A7900FCD9AC /* img-Product-01@1x.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AA7869281D6B8A7900FCD9AC /* img-Product-01@1x.pdf */; };
+		AA7869391D6B8A7900FCD9AC /* img-Product-01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869291D6B8A7900FCD9AC /* img-Product-01@2x.png */; };
+		AA78693A1D6B8A7900FCD9AC /* img-Product-01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA78692A1D6B8A7900FCD9AC /* img-Product-01@3x.png */; };
+		AA78693B1D6B8A7900FCD9AC /* teslamodel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA78692B1D6B8A7900FCD9AC /* teslamodel3.jpg */; };
+		AA78693C1D6B8A7900FCD9AC /* teslamodelS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA78692C1D6B8A7900FCD9AC /* teslamodelS.jpg */; };
+		AA78693D1D6B8A7900FCD9AC /* teslamodelX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA78692D1D6B8A7900FCD9AC /* teslamodelX.jpg */; };
+		AA78693E1D6B8A7900FCD9AC /* tweetdeck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA78692E1D6B8A7900FCD9AC /* tweetdeck.jpg */; };
+		AA78693F1D6B8A7900FCD9AC /* twitteralert.png in Resources */ = {isa = PBXBuildFile; fileRef = AA78692F1D6B8A7900FCD9AC /* twitteralert.png */; };
+		AA7869401D6B8A7900FCD9AC /* ubertwitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7869301D6B8A7900FCD9AC /* ubertwitter.jpg */; };
+		AA7869421D6B8AA300FCD9AC /* img-companyLogo_Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869411D6B8AA300FCD9AC /* img-companyLogo_Twitter.png */; };
+		AA7869441D6B8AB800FCD9AC /* img-companyLogo_Tesla.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869431D6B8AB800FCD9AC /* img-companyLogo_Tesla.png */; };
+		AA7869471D6B8ACC00FCD9AC /* img-companyLogo_Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869451D6B8ACC00FCD9AC /* img-companyLogo_Apple.png */; };
+		AA7869481D6B8ACC00FCD9AC /* img-companyLogo_Google.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869461D6B8ACC00FCD9AC /* img-companyLogo_Google.png */; };
+		AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96D2661D5CF340000BAD29 /* WebViewController.m */; };
+		AAA38C481D5BBB7200C5E310 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA38C471D5BBB7200C5E310 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +80,29 @@
 		48A656E818163F8700746D36 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductViewController.h; path = ../ProductViewController.h; sourceTree = "<group>"; };
 		48A656E918163F8700746D36 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductViewController.m; path = ../ProductViewController.m; sourceTree = "<group>"; };
 		48A656ED1816468000746D36 /* Sunflower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Sunflower.gif; sourceTree = "<group>"; };
+		AA7869211D6B8A7900FCD9AC /* appleipad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = appleipad.gif; path = "Images.xcassets/Product Images/appleipad.gif"; sourceTree = "<group>"; };
+		AA7869221D6B8A7900FCD9AC /* appleiphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = appleiphone.jpg; path = "Images.xcassets/Product Images/appleiphone.jpg"; sourceTree = "<group>"; };
+		AA7869231D6B8A7900FCD9AC /* appleipodtouch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = appleipodtouch.gif; path = "Images.xcassets/Product Images/appleipodtouch.gif"; sourceTree = "<group>"; };
+		AA7869241D6B8A7900FCD9AC /* google_gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google_gmail.png; path = "Images.xcassets/Product Images/google_gmail.png"; sourceTree = "<group>"; };
+		AA7869251D6B8A7900FCD9AC /* Google_Maps_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Google_Maps_Icon.png; path = "Images.xcassets/Product Images/Google_Maps_Icon.png"; sourceTree = "<group>"; };
+		AA7869261D6B8A7900FCD9AC /* google-adwords-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "google-adwords-logo.png"; path = "Images.xcassets/Product Images/google-adwords-logo.png"; sourceTree = "<group>"; };
+		AA7869271D6B8A7900FCD9AC /* img-Product-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-Product-01.png"; path = "Images.xcassets/Product Images/img-Product-01.png"; sourceTree = "<group>"; };
+		AA7869281D6B8A7900FCD9AC /* img-Product-01@1x.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "img-Product-01@1x.pdf"; path = "Images.xcassets/Product Images/img-Product-01@1x.pdf"; sourceTree = "<group>"; };
+		AA7869291D6B8A7900FCD9AC /* img-Product-01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-Product-01@2x.png"; path = "Images.xcassets/Product Images/img-Product-01@2x.png"; sourceTree = "<group>"; };
+		AA78692A1D6B8A7900FCD9AC /* img-Product-01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-Product-01@3x.png"; path = "Images.xcassets/Product Images/img-Product-01@3x.png"; sourceTree = "<group>"; };
+		AA78692B1D6B8A7900FCD9AC /* teslamodel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teslamodel3.jpg; path = "Images.xcassets/Product Images/teslamodel3.jpg"; sourceTree = "<group>"; };
+		AA78692C1D6B8A7900FCD9AC /* teslamodelS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teslamodelS.jpg; path = "Images.xcassets/Product Images/teslamodelS.jpg"; sourceTree = "<group>"; };
+		AA78692D1D6B8A7900FCD9AC /* teslamodelX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teslamodelX.jpg; path = "Images.xcassets/Product Images/teslamodelX.jpg"; sourceTree = "<group>"; };
+		AA78692E1D6B8A7900FCD9AC /* tweetdeck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tweetdeck.jpg; path = "Images.xcassets/Product Images/tweetdeck.jpg"; sourceTree = "<group>"; };
+		AA78692F1D6B8A7900FCD9AC /* twitteralert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitteralert.png; path = "Images.xcassets/Product Images/twitteralert.png"; sourceTree = "<group>"; };
+		AA7869301D6B8A7900FCD9AC /* ubertwitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ubertwitter.jpg; path = "Images.xcassets/Product Images/ubertwitter.jpg"; sourceTree = "<group>"; };
+		AA7869411D6B8AA300FCD9AC /* img-companyLogo_Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Twitter.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Twitter.png"; sourceTree = "<group>"; };
+		AA7869431D6B8AB800FCD9AC /* img-companyLogo_Tesla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Tesla.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Tesla.png"; sourceTree = "<group>"; };
+		AA7869451D6B8ACC00FCD9AC /* img-companyLogo_Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Apple.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Apple.png"; sourceTree = "<group>"; };
+		AA7869461D6B8ACC00FCD9AC /* img-companyLogo_Google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Google.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Google.png"; sourceTree = "<group>"; };
+		AA96D2651D5CF340000BAD29 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		AA96D2661D5CF340000BAD29 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		AAA38C471D5BBB7200C5E310 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA38C481D5BBB7200C5E310 /* WebKit.framework in Frameworks */,
 				48A656B718163BF200746D36 /* CoreGraphics.framework in Frameworks */,
 				48A656B918163BF200746D36 /* UIKit.framework in Frameworks */,
 				48A656B518163BF200746D36 /* Foundation.framework in Frameworks */,
@@ -107,6 +153,8 @@
 			children = (
 				48A656E818163F8700746D36 /* ProductViewController.h */,
 				48A656E918163F8700746D36 /* ProductViewController.m */,
+				AA96D2651D5CF340000BAD29 /* WebViewController.h */,
+				AA96D2661D5CF340000BAD29 /* WebViewController.m */,
 			);
 			name = ProductViewController;
 			sourceTree = "<group>";
@@ -133,6 +181,7 @@
 		48A656B318163BF200746D36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAA38C471D5BBB7200C5E310 /* WebKit.framework */,
 				48A656B418163BF200746D36 /* Foundation.framework */,
 				48A656B618163BF200746D36 /* CoreGraphics.framework */,
 				48A656B818163BF200746D36 /* UIKit.framework */,
@@ -157,6 +206,26 @@
 		48A656BB18163BF200746D36 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA7869451D6B8ACC00FCD9AC /* img-companyLogo_Apple.png */,
+				AA7869461D6B8ACC00FCD9AC /* img-companyLogo_Google.png */,
+				AA7869431D6B8AB800FCD9AC /* img-companyLogo_Tesla.png */,
+				AA7869411D6B8AA300FCD9AC /* img-companyLogo_Twitter.png */,
+				AA7869211D6B8A7900FCD9AC /* appleipad.gif */,
+				AA7869221D6B8A7900FCD9AC /* appleiphone.jpg */,
+				AA7869231D6B8A7900FCD9AC /* appleipodtouch.gif */,
+				AA7869241D6B8A7900FCD9AC /* google_gmail.png */,
+				AA7869251D6B8A7900FCD9AC /* Google_Maps_Icon.png */,
+				AA7869261D6B8A7900FCD9AC /* google-adwords-logo.png */,
+				AA7869271D6B8A7900FCD9AC /* img-Product-01.png */,
+				AA7869281D6B8A7900FCD9AC /* img-Product-01@1x.pdf */,
+				AA7869291D6B8A7900FCD9AC /* img-Product-01@2x.png */,
+				AA78692A1D6B8A7900FCD9AC /* img-Product-01@3x.png */,
+				AA78692B1D6B8A7900FCD9AC /* teslamodel3.jpg */,
+				AA78692C1D6B8A7900FCD9AC /* teslamodelS.jpg */,
+				AA78692D1D6B8A7900FCD9AC /* teslamodelX.jpg */,
+				AA78692E1D6B8A7900FCD9AC /* tweetdeck.jpg */,
+				AA78692F1D6B8A7900FCD9AC /* twitteralert.png */,
+				AA7869301D6B8A7900FCD9AC /* ubertwitter.jpg */,
 				48A656ED1816468000746D36 /* Sunflower.gif */,
 				48A656BC18163BF200746D36 /* NavCtrl-Info.plist */,
 				48A656BD18163BF200746D36 /* InfoPlist.strings */,
@@ -260,10 +329,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA78693A1D6B8A7900FCD9AC /* img-Product-01@3x.png in Resources */,
+				AA7869421D6B8AA300FCD9AC /* img-companyLogo_Twitter.png in Resources */,
+				AA78693E1D6B8A7900FCD9AC /* tweetdeck.jpg in Resources */,
+				AA7869341D6B8A7900FCD9AC /* google_gmail.png in Resources */,
+				AA7869471D6B8ACC00FCD9AC /* img-companyLogo_Apple.png in Resources */,
+				AA78693D1D6B8A7900FCD9AC /* teslamodelX.jpg in Resources */,
+				AA7869481D6B8ACC00FCD9AC /* img-companyLogo_Google.png in Resources */,
+				AA7869331D6B8A7900FCD9AC /* appleipodtouch.gif in Resources */,
 				48A656EE1816468000746D36 /* Sunflower.gif in Resources */,
 				48A656E718163C1B00746D36 /* CompanyViewController.xib in Resources */,
+				AA7869311D6B8A7900FCD9AC /* appleipad.gif in Resources */,
 				48A656BF18163BF200746D36 /* InfoPlist.strings in Resources */,
+				AA7869321D6B8A7900FCD9AC /* appleiphone.jpg in Resources */,
+				AA7869371D6B8A7900FCD9AC /* img-Product-01.png in Resources */,
+				AA7869351D6B8A7900FCD9AC /* Google_Maps_Icon.png in Resources */,
 				48A656C718163BF200746D36 /* Images.xcassets in Resources */,
+				AA7869441D6B8AB800FCD9AC /* img-companyLogo_Tesla.png in Resources */,
+				AA78693B1D6B8A7900FCD9AC /* teslamodel3.jpg in Resources */,
+				AA78693C1D6B8A7900FCD9AC /* teslamodelS.jpg in Resources */,
+				AA7869361D6B8A7900FCD9AC /* google-adwords-logo.png in Resources */,
+				AA7869391D6B8A7900FCD9AC /* img-Product-01@2x.png in Resources */,
+				AA78693F1D6B8A7900FCD9AC /* twitteralert.png in Resources */,
+				AA7869381D6B8A7900FCD9AC /* img-Product-01@1x.pdf in Resources */,
+				AA7869401D6B8A7900FCD9AC /* ubertwitter.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A656E618163C1B00746D36 /* CompanyViewController.m in Sources */,
+				AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */,
 				48A656C518163BF200746D36 /* NavControllerAppDelegate.m in Sources */,
 				48A656C118163BF200746D36 /* main.m in Sources */,
 				48A656EB18163F8700746D36 /* ProductViewController.m in Sources */,
