@@ -43,6 +43,8 @@
 		AA7869441D6B8AB800FCD9AC /* img-companyLogo_Tesla.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869431D6B8AB800FCD9AC /* img-companyLogo_Tesla.png */; };
 		AA7869471D6B8ACC00FCD9AC /* img-companyLogo_Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869451D6B8ACC00FCD9AC /* img-companyLogo_Apple.png */; };
 		AA7869481D6B8ACC00FCD9AC /* img-companyLogo_Google.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7869461D6B8ACC00FCD9AC /* img-companyLogo_Google.png */; };
+		AA78694B1D6B9CA300FCD9AC /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78694A1D6B9CA300FCD9AC /* Product.m */; };
+		AA78694E1D6B9CB800FCD9AC /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78694D1D6B9CB800FCD9AC /* Company.m */; };
 		AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96D2661D5CF340000BAD29 /* WebViewController.m */; };
 		AAA38C481D5BBB7200C5E310 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA38C471D5BBB7200C5E310 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,10 @@
 		AA7869431D6B8AB800FCD9AC /* img-companyLogo_Tesla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Tesla.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Tesla.png"; sourceTree = "<group>"; };
 		AA7869451D6B8ACC00FCD9AC /* img-companyLogo_Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Apple.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Apple.png"; sourceTree = "<group>"; };
 		AA7869461D6B8ACC00FCD9AC /* img-companyLogo_Google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-companyLogo_Google.png"; path = "Images.xcassets/Company Logos/img-companyLogo_Google.png"; sourceTree = "<group>"; };
+		AA7869491D6B9CA300FCD9AC /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		AA78694A1D6B9CA300FCD9AC /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		AA78694C1D6B9CB800FCD9AC /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		AA78694D1D6B9CB800FCD9AC /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		AA96D2651D5CF340000BAD29 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		AA96D2661D5CF340000BAD29 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		AAA38C471D5BBB7200C5E310 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -153,6 +159,10 @@
 			children = (
 				48A656E818163F8700746D36 /* ProductViewController.h */,
 				48A656E918163F8700746D36 /* ProductViewController.m */,
+				AA7869491D6B9CA300FCD9AC /* Product.h */,
+				AA78694A1D6B9CA300FCD9AC /* Product.m */,
+				AA78694C1D6B9CB800FCD9AC /* Company.h */,
+				AA78694D1D6B9CB800FCD9AC /* Company.m */,
 				AA96D2651D5CF340000BAD29 /* WebViewController.h */,
 				AA96D2661D5CF340000BAD29 /* WebViewController.m */,
 			);
@@ -374,8 +384,10 @@
 				48A656E618163C1B00746D36 /* CompanyViewController.m in Sources */,
 				AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */,
 				48A656C518163BF200746D36 /* NavControllerAppDelegate.m in Sources */,
+				AA78694B1D6B9CA300FCD9AC /* Product.m in Sources */,
 				48A656C118163BF200746D36 /* main.m in Sources */,
 				48A656EB18163F8700746D36 /* ProductViewController.m in Sources */,
+				AA78694E1D6B9CB800FCD9AC /* Company.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

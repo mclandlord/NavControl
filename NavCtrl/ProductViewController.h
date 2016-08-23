@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import "WebViewController.h"
+#import "Product.h"
+#import "Company.h"
+
 
 //@interface ProductViewController : UITableViewController<UITextFieldDelegate, WKNavigationDelegate>
 @interface ProductViewController : UITableViewController
