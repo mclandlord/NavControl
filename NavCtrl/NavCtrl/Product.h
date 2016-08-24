@@ -12,6 +12,8 @@
 
 @interface Product : NSObject
 
+-(void) productNames;
+
 @property (nonatomic, retain) NSMutableArray *products;
 @property (nonatomic, retain) NSMutableArray *appleProd;
 @property (nonatomic, retain) NSMutableArray *twitterProd;

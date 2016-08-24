@@ -10,8 +10,9 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-
 @interface Company : NSObject
+
+- (void)companyNames;
 
 @property (nonatomic, retain) NSMutableArray *companyList;
 @property (nonatomic, retain) NSMutableArray *imageList;
