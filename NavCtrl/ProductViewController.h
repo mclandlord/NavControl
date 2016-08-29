@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import "WebViewController.h"
-#import "Product.h"
-#import "Company.h"
+#import "DAO.h"
 
 
 //@interface ProductViewController : UITableViewController<UITextFieldDelegate, WKNavigationDelegate>
@@ -21,6 +20,7 @@
 @property (nonatomic, retain) NSMutableArray *twitterProd;
 @property (nonatomic, retain) NSMutableArray *teslaProd;
 @property (nonatomic, retain) NSMutableArray *googleProd;
+@property (nonatomic, retain) DAO *DataAccessObject;
 
 @property (nonatomic, retain) WebViewController * webViewController;
 @property (strong, nonatomic) NSString *productUrl;

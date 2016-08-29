@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Company.h"
+#import "Product.h"
 
 @interface DAO : NSObject
 
-@end
+@property (nonatomic, retain) NSMutableArray *companies;
 
+@property (nonatomic, retain) NSString *someProperty;
+
++ (id)sharedManager;
+
+@end
 
 

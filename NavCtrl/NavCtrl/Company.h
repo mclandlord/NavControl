@@ -12,10 +12,14 @@
 
 @interface Company : NSObject
 
-- (void)companyNames;
+//- (void)companyNames;
 
-@property (nonatomic, retain) NSMutableArray *companyList;
-@property (nonatomic, retain) NSMutableArray *imageList;
+@property (nonatomic, retain) NSString *companyName;
+@property (nonatomic, retain) NSString *companyImageString;
 @property (nonatomic, retain) NSMutableArray *products;
+
+- (instancetype)initWithName: (NSString*) companyName
+                       Image: (NSString*) imageString
+                    Products: (NSMutableArray*) products;
 
 @end

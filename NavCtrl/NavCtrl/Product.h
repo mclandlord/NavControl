@@ -12,12 +12,26 @@
 
 @interface Product : NSObject
 
--(void) productNames;
 
-@property (nonatomic, retain) NSMutableArray *products;
-@property (nonatomic, retain) NSMutableArray *appleProd;
-@property (nonatomic, retain) NSMutableArray *twitterProd;
-@property (nonatomic, retain) NSMutableArray *teslaProd;
-@property (nonatomic, retain) NSMutableArray *googleProd;
+@property (strong, nonatomic) NSString* productName;
+@property (strong, nonatomic) NSString* productImageString;
+@property (strong, nonatomic) NSString* productUrlString;
+
+- (instancetype)initWithName: (NSString*) productName
+                 imageString: (NSString*) imageString
+                   urlString: (NSString*) urlString;
+
+
+
+
+
+//-(void) productLogo;
+//-(void) loadArray;
+//
+//@property (nonatomic, retain) NSMutableArray *products;
+//@property (nonatomic, retain) NSMutableArray *appleProd;
+//@property (nonatomic, retain) NSMutableArray *twitterProd;
+//@property (nonatomic, retain) NSMutableArray *teslaProd;
+//@property (nonatomic, retain) NSMutableArray *googleProd;
 
 @end

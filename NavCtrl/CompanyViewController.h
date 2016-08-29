@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
-#import "Product.h"
-#import "Company.h"
+#import "DAO.h"
 
 @class ProductViewController;
 
@@ -17,6 +16,8 @@
 
 @property (nonatomic, retain) NSMutableArray *companyList;
 @property (nonatomic, retain) NSMutableArray *imageList;
+
+@property (nonatomic, retain) DAO *DataAccessObject;
 
 @property (nonatomic, retain) IBOutlet  ProductViewController * productViewController;
 
