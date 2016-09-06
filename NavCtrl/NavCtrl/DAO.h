@@ -17,6 +17,8 @@
 @property (nonatomic, retain) NSString *someProperty;
 
 + (id)sharedManager;
+- (id)init;
+
 
 @end
 

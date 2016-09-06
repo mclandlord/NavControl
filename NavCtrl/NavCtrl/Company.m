@@ -10,13 +10,6 @@
 
 @implementation Company
 
-//- (void)companyNames
-//{
-//    self.companyList = [[NSMutableArray alloc] initWithObjects:@"Apple",@"Twitter", @"Tesla", @"Google", nil];
-//    self.imageList = [[NSMutableArray alloc] initWithObjects:@"img-companyLogo_Apple.png", @"img-companyLogo_Twitter.png", @"img-companyLogo_Tesla.png", @"img-companyLogo_Google.png", nil];
-//
-//}
-
 - (instancetype)initWithName: (NSString*) companyName
                        Image: (NSString*) imageString
                     Products: (NSMutableArray*) products

@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "DAO.h"
 
+@class Company;
 @interface Product : NSObject
 
 
@@ -21,17 +23,5 @@
                  imageString: (NSString*) imageString
                    urlString: (NSString*) urlString;
 
-
-
-
-
-//-(void) productLogo;
-//-(void) loadArray;
-//
-//@property (nonatomic, retain) NSMutableArray *products;
-//@property (nonatomic, retain) NSMutableArray *appleProd;
-//@property (nonatomic, retain) NSMutableArray *twitterProd;
-//@property (nonatomic, retain) NSMutableArray *teslaProd;
-//@property (nonatomic, retain) NSMutableArray *googleProd;
 
 @end
