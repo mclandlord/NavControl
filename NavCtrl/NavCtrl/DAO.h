@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) NSMutableArray *companies;
 
-@property (nonatomic, retain) NSString *someProperty;
+//@property (nonatomic, retain) NSString *someProperty;
 
 + (id)sharedManager;
 - (id)init;

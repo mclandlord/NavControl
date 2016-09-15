@@ -21,7 +21,7 @@
     
     WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:theConfiguration];
-    webView.navigationDelegate = self;
+    //webView.navigationDelegate = self;
     NSURL *nsurl=[NSURL URLWithString:_URL];
     NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
     [webView loadRequest:nsrequest];

@@ -50,7 +50,8 @@
         NSMutableArray *googleProducts = [[NSMutableArray alloc]initWithObjects:googleMaps, googleAdwords, gmail, nil];
         Company *google = [[Company alloc]initWithName:@"Google" Image:@"img-companyLogo_Google.png" Products: googleProducts];
         
-        _companies = [[[NSMutableArray alloc] initWithObjects:apple, twitter, tesla, google, nil] retain];
+        _companies = [[NSMutableArray alloc] initWithObjects:apple, twitter, tesla, google, nil] ;
+     
     }
     return self;
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProductViewController">
+            <connections>
+                <outlet property="productIURL" destination="nK2-aN-JK5" id="Hgn-Xr-hNf"/>
+                <outlet property="productImageFile" destination="EOD-p0-1S3" id="ULF-dw-IfD"/>
+                <outlet property="productName" destination="gpc-R0-YYm" id="bKv-kn-7sb"/>
+                <outlet property="productURL" destination="nK2-aN-JK5" id="6gW-bd-zRP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Product Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpc-R0-YYm">
+                    <rect key="frame" x="8" y="85" width="361" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Product URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-aN-JK5">
+                    <rect key="frame" x="8" y="231" width="361" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Product Image File" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOD-p0-1S3">
+                    <rect key="frame" x="8" y="402" width="361" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.17351823329999999" green="1" blue="0.75679498489999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nK2-aN-JK5" firstAttribute="top" secondItem="gpc-R0-YYm" secondAttribute="bottom" constant="116" id="6bG-9d-fI1"/>
+                <constraint firstItem="nK2-aN-JK5" firstAttribute="top" secondItem="gpc-R0-YYm" secondAttribute="bottom" constant="116" id="70B-yf-Z1k"/>
+                <constraint firstItem="EOD-p0-1S3" firstAttribute="top" secondItem="nK2-aN-JK5" secondAttribute="bottom" constant="141" id="9Vl-Y9-9HW"/>
+                <constraint firstItem="gpc-R0-YYm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="u0d-nk-2Hb"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+        </view>
+    </objects>
+</document>

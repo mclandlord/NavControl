@@ -7,6 +7,7 @@
 //
 
 #import "ProductViewController.h"
+#import "AddProductViewController.h"
 
 
 
@@ -35,8 +36,33 @@
      self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
+    
+   // self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self
+                                                                 action:@selector(addButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+    
+    self.navigationItem.rightBarButtonItems = @[self.editButtonItem, addButton];
+    
+    [addButton release];
+
+    
+    [self.tableView setAllowsSelectionDuringEditing:true]; // Permit selection of rows while in editing mode.
+
         
+}
+
+-(void)addButtonPressed:(id)sender{
+    NSLog(@"Add Pressed");
+    
+    
+    AddProductViewController *addProductViewController = [[AddProductViewController alloc] init];
+    [self.navigationController pushViewController:addProductViewController animated:YES];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -134,6 +160,8 @@
     // Create the next view controller.
 
     WebViewController *webViewControllerLocal = [[WebViewController alloc] init];
+    webViewControllerLocal = [[WebViewController alloc] init];
+    
     webViewControllerLocal.URL = productURL;
     [self.navigationController pushViewController:webViewControllerLocal animated:YES];
     [webViewControllerLocal release];

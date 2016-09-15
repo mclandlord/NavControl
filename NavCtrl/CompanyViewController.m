@@ -8,6 +8,7 @@
 
 #import "CompanyViewController.h"
 #import "ProductViewController.h"
+#import "AddCompanyViewController.h"
 
 
 @interface CompanyViewController ()
@@ -40,9 +41,12 @@
     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
-    
+    UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self
+                                                                  action:@selector(addButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    [addButton release];
     
     //  self.companyList = [[NSMutableArray alloc] init];
     //  [self.companyList addObjectsFromArray:@[@"Apple",@"Twitter", @"Tesla", @"Google", nil]];
@@ -52,6 +56,16 @@
     
     //    self.imageList = [[NSMutableArray alloc] initWithObjects:@"img-companyLogo_Apple.png", @"img-companyLogo_Twitter.png", @"img-companyLogo_Tesla.png", @"img-companyLogo_Google.png", nil];
     
+}
+
+-(void)addButtonPressed:(id)sender{
+    NSLog(@"Add Pressed");
+
+    AddCompanyViewController *addCompanyViewController = [[AddCompanyViewController alloc] init];
+    [self.navigationController pushViewController:addCompanyViewController animated:YES];
+    
+    
+     
 }
 
 - (void)didReceiveMemoryWarning

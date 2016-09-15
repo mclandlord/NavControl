@@ -46,6 +46,10 @@
 		AA78694B1D6B9CA300FCD9AC /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78694A1D6B9CA300FCD9AC /* Product.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA78694E1D6B9CB800FCD9AC /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78694D1D6B9CB800FCD9AC /* Company.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96D2661D5CF340000BAD29 /* WebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA982EBA1D8AFC3D0098CCDD /* AddCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA982EB81D8AFC3D0098CCDD /* AddCompanyViewController.m */; };
+		AA982EBB1D8AFC3D0098CCDD /* AddCompanyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA982EB91D8AFC3D0098CCDD /* AddCompanyViewController.xib */; };
+		AA982EBF1D8AFC860098CCDD /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA982EBD1D8AFC860098CCDD /* AddProductViewController.m */; };
+		AA982EC01D8AFC860098CCDD /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA982EBE1D8AFC860098CCDD /* AddProductViewController.xib */; };
 		AAA38C481D5BBB7200C5E310 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA38C471D5BBB7200C5E310 /* WebKit.framework */; };
 		AAEA4BE71D6DEC76007B619E /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA4BE61D6DEC76007B619E /* DAO.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -109,6 +113,12 @@
 		AA78694D1D6B9CB800FCD9AC /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		AA96D2651D5CF340000BAD29 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		AA96D2661D5CF340000BAD29 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		AA982EB71D8AFC3D0098CCDD /* AddCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCompanyViewController.h; path = ../AddCompanyViewController.h; sourceTree = "<group>"; };
+		AA982EB81D8AFC3D0098CCDD /* AddCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCompanyViewController.m; path = ../AddCompanyViewController.m; sourceTree = "<group>"; };
+		AA982EB91D8AFC3D0098CCDD /* AddCompanyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCompanyViewController.xib; path = ../AddCompanyViewController.xib; sourceTree = "<group>"; };
+		AA982EBC1D8AFC860098CCDD /* AddProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductViewController.h; sourceTree = "<group>"; };
+		AA982EBD1D8AFC860098CCDD /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
+		AA982EBE1D8AFC860098CCDD /* AddProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		AAA38C471D5BBB7200C5E310 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		AAEA4BE51D6DEC76007B619E /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
 		AAEA4BE61D6DEC76007B619E /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
@@ -153,6 +163,7 @@
 			children = (
 				48A656E318163C1B00746D36 /* CompanyViewController.h */,
 				48A656E418163C1B00746D36 /* CompanyViewController.m */,
+				48A656E518163C1B00746D36 /* CompanyViewController.xib */,
 			);
 			name = ParentViewController;
 			sourceTree = "<group>";
@@ -202,12 +213,13 @@
 		48A656BA18163BF200746D36 /* NavCtrl */ = {
 			isa = PBXGroup;
 			children = (
+				AA982EC21D8AFCA40098CCDD /* AddCompanyViewController */,
+				AA982EC11D8AFC8F0098CCDD /* AddProductViewController */,
 				AAEA4BE91D6E01E3007B619E /* Model */,
 				483796CB1BCBF7A00062D5AB /* AppDelegate */,
 				483796CC1BCBF7C70062D5AB /* ParentViewController */,
 				483796CD1BCBF7EB0062D5AB /* ProductViewController */,
 				48A656C618163BF200746D36 /* Images.xcassets */,
-				48A656E518163C1B00746D36 /* CompanyViewController.xib */,
 				48A656BB18163BF200746D36 /* Supporting Files */,
 			);
 			path = NavCtrl;
@@ -261,6 +273,26 @@
 				48A656D618163BF200746D36 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA982EC11D8AFC8F0098CCDD /* AddProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA982EBC1D8AFC860098CCDD /* AddProductViewController.h */,
+				AA982EBD1D8AFC860098CCDD /* AddProductViewController.m */,
+				AA982EBE1D8AFC860098CCDD /* AddProductViewController.xib */,
+			);
+			name = AddProductViewController;
+			sourceTree = "<group>";
+		};
+		AA982EC21D8AFCA40098CCDD /* AddCompanyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA982EB71D8AFC3D0098CCDD /* AddCompanyViewController.h */,
+				AA982EB81D8AFC3D0098CCDD /* AddCompanyViewController.m */,
+				AA982EB91D8AFC3D0098CCDD /* AddCompanyViewController.xib */,
+			);
+			name = AddCompanyViewController;
 			sourceTree = "<group>";
 		};
 		AAEA4BE91D6E01E3007B619E /* Model */ = {
@@ -368,6 +400,7 @@
 				AA7869371D6B8A7900FCD9AC /* img-Product-01.png in Resources */,
 				AA7869351D6B8A7900FCD9AC /* Google_Maps_Icon.png in Resources */,
 				48A656C718163BF200746D36 /* Images.xcassets in Resources */,
+				AA982EC01D8AFC860098CCDD /* AddProductViewController.xib in Resources */,
 				AA7869441D6B8AB800FCD9AC /* img-companyLogo_Tesla.png in Resources */,
 				AA78693B1D6B8A7900FCD9AC /* teslamodel3.jpg in Resources */,
 				AA78693C1D6B8A7900FCD9AC /* teslamodelS.jpg in Resources */,
@@ -376,6 +409,7 @@
 				AA78693F1D6B8A7900FCD9AC /* twitteralert.png in Resources */,
 				AA7869381D6B8A7900FCD9AC /* img-Product-01@1x.pdf in Resources */,
 				AA7869401D6B8A7900FCD9AC /* ubertwitter.jpg in Resources */,
+				AA982EBB1D8AFC3D0098CCDD /* AddCompanyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA982EBF1D8AFC860098CCDD /* AddProductViewController.m in Sources */,
+				AA982EBA1D8AFC3D0098CCDD /* AddCompanyViewController.m in Sources */,
 				48A656E618163C1B00746D36 /* CompanyViewController.m in Sources */,
 				AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */,
 				48A656C518163BF200746D36 /* NavControllerAppDelegate.m in Sources */,
