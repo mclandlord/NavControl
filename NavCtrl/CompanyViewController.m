@@ -58,6 +58,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 -(void)addButtonPressed:(id)sender{
     NSLog(@"Add Pressed");
 
@@ -157,7 +162,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    self.productViewController.company = [self.companyList objectAtIndex:[indexPath row]];
+    Company *company = [self.companyList objectAtIndex:[indexPath row]];
+    
+    self.DataAccessObject.products = company.products;
+    
+    self.productViewController.company = company;
     self.productViewController.title = self.productViewController.company.companyName;
     
     [self.navigationController pushViewController:self.productViewController animated:YES];

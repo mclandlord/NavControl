@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAO.h"
+#import "Company.h"
+#import "Product.h"
 
 @interface AddProductViewController : UIViewController
 
@@ -18,6 +21,8 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *productImageFile;
 
+
+@property (nonatomic, retain) Company *company;
 
 
 @end

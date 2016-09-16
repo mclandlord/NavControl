@@ -28,15 +28,18 @@
 }
 
 -(void)saveButtonPressed:(id)sender{
+
     
-//    NSMutableArray *randomSelection = [[NSMutableArray alloc] init];
-//    [randomSelection addObject:@"string1"];
-//
+//    NSMutableArray *newCompany = [[NSMutableArray alloc]initWithObjects:_companyName, _stockSymbol, _companyImageFile, nil];
+//    Company *apple = [[Company alloc]initWithName:@"Apple" Image:@"img-companyLogo_Apple.png" Products: appleProducts];
     
+    Company *newCompany = [[Company alloc]initWithName:self.companyName.text Image:self.companyImageFile.text  Stock:self.stockSymbol.text Products: nil];
+
+    DAO *dataAccessObject = [DAO sharedManager];
+
+    [dataAccessObject.companies addObject:newCompany];
     
-   // self.DAO.companyName = self.companyName.text;
-    
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

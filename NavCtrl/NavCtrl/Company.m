@@ -12,12 +12,14 @@
 
 - (instancetype)initWithName: (NSString*) companyName
                        Image: (NSString*) imageString
+                       Stock: (NSString*) stockSymbol
                     Products: (NSMutableArray*) products
 {
     self = [super init];
     if (self) {
         self.companyName = companyName;
         self.companyImageString = imageString;
+        self.stockSymbol = stockSymbol;
         self.products = products;
     }
     return self;

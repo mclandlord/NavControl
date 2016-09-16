@@ -42,13 +42,13 @@
         Product *gmail = [[Product alloc]initWithName:@"Gmail" imageString:@"google_gmail.png" urlString:@"https://mail.google.com"];
         
         NSMutableArray *appleProducts = [[NSMutableArray alloc]initWithObjects:iPhone, iPodTouch, iPad, nil];
-        Company *apple = [[Company alloc]initWithName:@"Apple" Image:@"img-companyLogo_Apple.png" Products: appleProducts];
+        Company *apple = [[Company alloc]initWithName:@"Apple" Image:@"img-companyLogo_Apple.png" Stock:@"AAPL" Products: appleProducts];
         NSMutableArray *twitterProducts = [[NSMutableArray alloc]initWithObjects:tweetDeck, uberTwitter, twitterAlerts, nil];
-        Company *twitter = [[Company alloc]initWithName:@"Twitter" Image:@"img-companyLogo_Twitter.png" Products: twitterProducts];
+        Company *twitter = [[Company alloc]initWithName:@"Twitter" Image:@"img-companyLogo_Twitter.png" Stock:@"TWTR" Products: twitterProducts];
         NSMutableArray *teslaProducts = [[NSMutableArray alloc]initWithObjects:modelS, modelX, model3, nil];
-        Company *tesla = [[Company alloc]initWithName:@"Tesla" Image:@"img-companyLogo_Tesla.png" Products: teslaProducts];
+        Company *tesla = [[Company alloc]initWithName:@"Tesla" Image:@"img-companyLogo_Tesla.png" Stock:@"TSLA" Products: teslaProducts];
         NSMutableArray *googleProducts = [[NSMutableArray alloc]initWithObjects:googleMaps, googleAdwords, gmail, nil];
-        Company *google = [[Company alloc]initWithName:@"Google" Image:@"img-companyLogo_Google.png" Products: googleProducts];
+        Company *google = [[Company alloc]initWithName:@"Google" Image:@"img-companyLogo_Google.png" Stock:@"GOOGL" Products: googleProducts];
         
         _companies = [[NSMutableArray alloc] initWithObjects:apple, twitter, tesla, google, nil] ;
      

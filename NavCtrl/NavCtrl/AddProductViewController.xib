@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProductViewController">
             <connections>
-                <outlet property="productIURL" destination="nK2-aN-JK5" id="Hgn-Xr-hNf"/>
                 <outlet property="productImageFile" destination="EOD-p0-1S3" id="ULF-dw-IfD"/>
                 <outlet property="productName" destination="gpc-R0-YYm" id="bKv-kn-7sb"/>
                 <outlet property="productURL" destination="nK2-aN-JK5" id="6gW-bd-zRP"/>

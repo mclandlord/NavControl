@@ -27,7 +27,17 @@
 
 -(void)saveButtonPressed:(id)sender{
     
+    Product *newProduct = [[Product alloc]initWithName:self.productName.text imageString:self.productImageFile.text urlString:self.productURL.text];
     
+    DAO *dataAccessObject = [DAO sharedManager];
+    
+    // company where the product will be added
+    // add product to company->products mutable array
+    
+    [dataAccessObject.products addObject:newProduct];
+
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
