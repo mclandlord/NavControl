@@ -20,7 +20,7 @@
     
     if(self.isEditMode){
         self.productName.text = self.productToEdit.productName;
-        self.productURL.text = self.productToEdit. productUrlString;
+        self.productURL.text = self.productToEdit.productUrlString;
         self.productImageFile.text = self.productToEdit.productImageString;
         //same for image textfield
     }

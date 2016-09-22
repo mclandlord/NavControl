@@ -48,6 +48,8 @@
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
     
+    [self.tableView setAllowsSelectionDuringEditing:true];
+    
     //  self.companyList = [[NSMutableArray alloc] init];
     //  [self.companyList addObjectsFromArray:@[@"Apple",@"Twitter", @"Tesla", @"Google", nil]];
     //  self.companyList = @[@"Apple",@"Twitter", @"Tesla", @"Google"];
@@ -58,19 +60,19 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
-}
+
 
 -(void)addButtonPressed:(id)sender{
     NSLog(@"Add Pressed");
 
     AddCompanyViewController *addCompanyViewController = [[AddCompanyViewController alloc] init];
+    addCompanyViewController.isEditMode = NO;
     [self.navigationController pushViewController:addCompanyViewController animated:YES];
-    
-    
-     
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -162,16 +164,33 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    Company *company = [self.companyList objectAtIndex:[indexPath row]];
+
+    Company *currentCompany = [self.companyList objectAtIndex:[indexPath row]];
+//    self.DataAccessObject.products = company.products;
     
-    self.DataAccessObject.products = company.products;
     
-    self.productViewController.company = company;
+    if (self.tableView.editing){
+        //go to edit view
+        NSLog(@"EDIT");
+        
+        AddCompanyViewController *compView = [[AddCompanyViewController alloc] init];
+        compView.isEditMode = YES;
+        compView.companyToEdit = currentCompany;
+        
+        [self.navigationController pushViewController:compView animated:YES];
+        [compView release];
+        
+        
+    } else {
+        // go to prodview
+        NSLog(@"Product View");
+        
+    self.productViewController.company = currentCompany;
     self.productViewController.title = self.productViewController.company.companyName;
     
     [self.navigationController pushViewController:self.productViewController animated:YES];
 }
 
-
+}
 
 @end

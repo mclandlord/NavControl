@@ -15,15 +15,13 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *productName;
 
-
 @property (retain, nonatomic) IBOutlet UITextField *productURL;
-@property (nonatomic) BOOL isEditMode;
-@property (strong, nonatomic) Product *productToEdit;
 
 @property (retain, nonatomic) IBOutlet UITextField *productImageFile;
 
+@property (nonatomic) BOOL isEditMode;
+@property (strong, nonatomic) Product *productToEdit;
 
 @property (nonatomic, retain) Company *company;
-
 
 @end

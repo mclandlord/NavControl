@@ -44,14 +44,11 @@
                                                                  action:@selector(addButtonPressed:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    
     self.navigationItem.rightBarButtonItems = @[self.editButtonItem, addButton];
     
     [addButton release];
 
-    
     [self.tableView setAllowsSelectionDuringEditing:true]; // Permit selection of rows while in editing mode.
-
         
 }
 
@@ -62,8 +59,6 @@
     AddProductViewController *addProductViewController = [[AddProductViewController alloc] init];
     addProductViewController.isEditMode = NO;
     [self.navigationController pushViewController:addProductViewController animated:YES];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -183,13 +178,6 @@
     [webViewControllerLocal release];
         
     }
-    
-    
-    
-    // Create the next view controller.
-
-    
-
     
     // NSURL *nsurl=[NSURL URLWithString:self.productUrl];
     // [NSURL URLWithString: nsurl];

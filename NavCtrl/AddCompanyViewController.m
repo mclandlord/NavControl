@@ -20,26 +20,40 @@
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController popViewControllerAnimated:YES];
     
+    if(self.isEditMode){
+        self.companyName.text = self.companyToEdit.companyName;
+        self.stockSymbol.text = self.companyToEdit.stockSymbol;
+        self.companyImageFile.text = self.companyToEdit.companyImageString;
+    }
+    
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self
                                                                   action:@selector(saveButtonPressed:)];
     self.navigationItem.rightBarButtonItem = saveButton;
     [saveButton release];
     
-}
+    }
+
 
 -(void)saveButtonPressed:(id)sender{
+
+    if(!self.isEditMode){
+        
+        Company *newCompany = [[Company alloc]initWithName:self.companyName.text Image:self.companyImageFile.text  Stock:self.stockSymbol.text Products: nil];
+        DAO *dataAccessObject = [DAO sharedManager];
+        [dataAccessObject.companies addObject:newCompany];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } else {
+        self.companyToEdit.companyName = self.companyName.text;
+        self.companyToEdit.stockSymbol = self.stockSymbol.text;
+        self.companyToEdit.companyImageString = self.companyImageFile.text;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 
     
 //    NSMutableArray *newCompany = [[NSMutableArray alloc]initWithObjects:_companyName, _stockSymbol, _companyImageFile, nil];
 //    Company *apple = [[Company alloc]initWithName:@"Apple" Image:@"img-companyLogo_Apple.png" Products: appleProducts];
     
-    Company *newCompany = [[Company alloc]initWithName:self.companyName.text Image:self.companyImageFile.text  Stock:self.stockSymbol.text Products: nil];
-
-    DAO *dataAccessObject = [DAO sharedManager];
-
-    [dataAccessObject.companies addObject:newCompany];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
