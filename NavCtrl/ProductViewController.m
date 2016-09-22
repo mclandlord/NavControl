@@ -60,6 +60,7 @@
     
     
     AddProductViewController *addProductViewController = [[AddProductViewController alloc] init];
+    addProductViewController.isEditMode = NO;
     [self.navigationController pushViewController:addProductViewController animated:YES];
     
     
@@ -155,16 +156,39 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *productURL = [[self.company.products objectAtIndex:indexPath.row] productUrlString];
+    Product *currentProduct = [self.company.products objectAtIndex:indexPath.row];
     
+    if (self.tableView.editing){
+        //go to edit view
+        NSLog(@"EDIT");
+        
+    AddProductViewController *prodView = [[AddProductViewController alloc] init];
+        prodView.isEditMode = YES;
+        prodView.productToEdit = currentProduct;
     
-    // Create the next view controller.
-
+    [self.navigationController pushViewController:prodView animated:YES];
+    [prodView release];
+        
+        
+    } else {
+        // go to webview
+        NSLog(@"Webview");
+        
+        
     WebViewController *webViewControllerLocal = [[WebViewController alloc] init];
     webViewControllerLocal = [[WebViewController alloc] init];
     
     webViewControllerLocal.URL = productURL;
     [self.navigationController pushViewController:webViewControllerLocal animated:YES];
     [webViewControllerLocal release];
+        
+    }
+    
+    
+    
+    // Create the next view controller.
+
+    
 
     
     // NSURL *nsurl=[NSURL URLWithString:self.productUrl];

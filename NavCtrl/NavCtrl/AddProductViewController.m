@@ -18,6 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if(self.isEditMode){
+        self.productName.text = self.productToEdit.productName;
+        self.productURL.text = self.productToEdit. productUrlString;
+        self.productImageFile.text = self.productToEdit.productImageString;
+        //same for image textfield
+    }
+    
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self
                                                                  action:@selector(saveButtonPressed:)];
     self.navigationItem.rightBarButtonItem = saveButton;
@@ -27,6 +34,8 @@
 
 -(void)saveButtonPressed:(id)sender{
     
+    
+    if(!self.isEditMode){
     Product *newProduct = [[Product alloc]initWithName:self.productName.text imageString:self.productImageFile.text urlString:self.productURL.text];
     
     DAO *dataAccessObject = [DAO sharedManager];
@@ -35,9 +44,14 @@
     // add product to company->products mutable array
     
     [dataAccessObject.products addObject:newProduct];
-
-    
     [self.navigationController popViewControllerAnimated:YES];
+   
+    } else {
+        self.productToEdit.productName = self.productName.text;
+        self.productToEdit.productUrlString = self.productURL.text;
+        self.productToEdit.productImageString = self.productImageFile.text;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     
 }
 

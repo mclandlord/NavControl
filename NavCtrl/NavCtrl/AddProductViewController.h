@@ -17,7 +17,8 @@
 
 
 @property (retain, nonatomic) IBOutlet UITextField *productURL;
-
+@property (nonatomic) BOOL isEditMode;
+@property (strong, nonatomic) Product *productToEdit;
 
 @property (retain, nonatomic) IBOutlet UITextField *productImageFile;
 
