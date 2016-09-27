@@ -15,8 +15,73 @@
 
 @implementation AddCompanyViewController
 
+
+- (void)registerForKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
+
+- (void)deregisterFromKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self registerForKeyboardNotifications];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self.view];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [self deregisterFromKeyboardNotifications];
+    
+    [super viewWillDisappear:animated];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    
+    [UIView animateWithDuration:0.3f animations:^ {
+        self.view.frame = CGRectMake(0, 0, 480, 480);
+    }];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification {
+    
+    [UIView animateWithDuration:0.3f animations:^ {
+        self.view.frame = CGRectMake(0, 0, 320, 480);
+    }];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController popViewControllerAnimated:YES];
     
@@ -33,6 +98,18 @@
     
     }
 
+
+-(void)animateTextField:(UITextField*)textField up:(BOOL)up withOffset:(CGFloat)offset
+{
+    const int movementDistance = -offset;
+    const float movementDuration = 0.4f;
+    int movement = (up ? movementDistance : -movementDistance);
+    [UIView beginAnimations: @"animateTextField" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
 
 -(void)saveButtonPressed:(id)sender{
 
