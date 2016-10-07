@@ -16,7 +16,7 @@
 
 @property (nonatomic, retain) NSMutableArray *products;
 
-//@property (nonatomic, retain) NSString *someProperty;
+-(void)getStockPrice;
 
 + (id)sharedManager;
 - (id)init;

@@ -31,17 +31,16 @@
 {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations.
+    self.clearsSelectionOnViewWillAppear = NO;
+   
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
     self.title = @"Watch List";
     
     self.DataAccessObject = [DAO sharedManager];
     self.companyList = self.DataAccessObject.companies;
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self
                                                                   action:@selector(addButtonPressed:)];
@@ -50,14 +49,25 @@
     
     [self.tableView setAllowsSelectionDuringEditing:true];
     
-    //  self.companyList = [[NSMutableArray alloc] init];
-    //  [self.companyList addObjectsFromArray:@[@"Apple",@"Twitter", @"Tesla", @"Google", nil]];
-    //  self.companyList = @[@"Apple",@"Twitter", @"Tesla", @"Google"];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshData)
+                                                 name:@"Stock Price Loaded"
+                                               object:nil];
+    [self.DataAccessObject getStockPrice];
+
     
-    //    self.companyList = [[NSMutableArray alloc] initWithObjects:@"Apple",@"Twitter", @"Tesla", @"Google", nil];
-    
-    //    self.imageList = [[NSMutableArray alloc] initWithObjects:@"img-companyLogo_Apple.png", @"img-companyLogo_Twitter.png", @"img-companyLogo_Tesla.png", @"img-companyLogo_Google.png", nil];
-    
+}
+
+-(void)refreshData
+{
+    [self.tableView reloadData];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    [self.tableView reloadData];
 }
 
 -(void)addButtonPressed:(id)sender{
@@ -68,10 +78,7 @@
     [self.navigationController pushViewController:addCompanyViewController animated:YES];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -103,12 +110,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
     
-    cell.textLabel.text = [[self.companyList objectAtIndex:[indexPath row]] companyName];
-    cell.imageView.image = [UIImage imageNamed:[[self.companyList objectAtIndex:[indexPath row]] companyImageString]];
+    NSString *cellTextString = [NSString stringWithFormat:@"%@ (%@) - $%@", [[self.companyList objectAtIndex:[indexPath row]] companyName], [[self.companyList objectAtIndex:[indexPath row]] stockSymbol], [[self.companyList objectAtIndex:[indexPath row]] stockPrice]];
+    cell.textLabel.text = cellTextString;
+    
+    UIImage *logoImage = [UIImage imageNamed:[[self.companyList objectAtIndex:[indexPath row]] companyImageString]];
+    if (logoImage == nil) {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSURL *documentsURL = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0];
+        NSURL *fileURL = [documentsURL URLByAppendingPathComponent:[[self.companyList objectAtIndex:[indexPath row]] companyName]];
+        NSData *imageData = [NSData dataWithContentsOfURL:fileURL];
+        logoImage = [UIImage imageWithData:imageData];
+    }
+    
+    [[cell imageView] setImage:logoImage];
     
     return cell;
+
 }
 
 
@@ -187,8 +205,18 @@
     self.productViewController.title = self.productViewController.company.companyName;
     
     [self.navigationController pushViewController:self.productViewController animated:YES];
+    }
+    
 }
 
+- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
+{
+    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return reSizeImage;
 }
+
 
 @end

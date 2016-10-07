@@ -55,6 +55,57 @@
     }
     return self;
 }
+-(void)getStockPrice
+{
+    NSString *urlString = @"http://finance.yahoo.com/d/quotes.csv?s=";
+    
+    NSMutableArray *stockSymbols = [[NSMutableArray alloc] init];
+    for (Company *company in self.companies) {
+        [stockSymbols addObject:company.stockSymbol];
+    }
+    NSString *stockSymbolSeparator = [stockSymbols componentsJoinedByString:@"+"];
+    urlString = [[urlString stringByAppendingString:stockSymbolSeparator] stringByAppendingString:@"&f=a"];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *urlReq = [NSMutableURLRequest requestWithURL:url];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:urlReq completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error != nil) {
+                if (error.code == NSURLErrorNotConnectedToInternet) {
+                    UIAlertController *errorAlert;
+                    errorAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Internet not connected" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}];
+                    [errorAlert addAction:defaultAction];
+                }
+            }
+        });
+        if (!error) {
+            NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSArray *stockPrices = [dataString componentsSeparatedByString:@"\n"];
+            NSLog(@"%@", stockPrices);
+            
+            for (int i = 0; i < stockPrices.count; i++) {
+                for (i = 0; i < [self.companies count]; i++) {
+                    Company *company = [self.companies objectAtIndex:i];
+                    company.stockPrice = stockPrices[i];
+                }
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName:@"Stock Price Loaded"
+                 object:self];
+            });
+            
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        
+    }];
+    [task resume];
+ 
+}
+
 
 //- (void)dealloc {
 //    // Should never be called, but just here for clarity really.

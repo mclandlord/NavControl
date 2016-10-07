@@ -97,7 +97,8 @@
     }
     // Configure the cell...
     cell.textLabel.text = [[self.company.products objectAtIndex:indexPath.row] productName];
-    cell.imageView.image = [UIImage imageNamed:[[self.company.products objectAtIndex:[indexPath row]] productImageString]];
+    UIImage *unscaledImage = [UIImage imageNamed:[[self.company.products objectAtIndex:[indexPath row]] productImageString]];
+    cell.imageView.image = [self reSizeImage:unscaledImage toSize:CGSizeMake(50,50)];
     
      return cell;
 }
@@ -186,5 +187,14 @@
     // Push the view controller.
     
     }
+
+- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
+{
+    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return reSizeImage;
+}
 
 @end
