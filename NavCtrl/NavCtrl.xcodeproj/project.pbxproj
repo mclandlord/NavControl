@@ -24,8 +24,6 @@
 		48A656EB18163F8700746D36 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A656E918163F8700746D36 /* ProductViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		48A656EE1816468000746D36 /* Sunflower.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48A656ED1816468000746D36 /* Sunflower.gif */; };
 		4908C26A1DB56D9D00C7E54A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4908C2681DB56D9D00C7E54A /* Model.xcdatamodeld */; };
-		4908C26F1DB571A400C7E54A /* Product+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908C26C1DB571A400C7E54A /* Product+CoreDataProperties.m */; };
-		4908C2701DB571A400C7E54A /* Company+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908C26E1DB571A400C7E54A /* Company+CoreDataProperties.m */; };
 		4996B7841DAECECE002A7982 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4996B7831DAECECD002A7982 /* CoreData.framework */; };
 		AA7869311D6B8A7900FCD9AC /* appleipad.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA7869211D6B8A7900FCD9AC /* appleipad.gif */; };
 		AA7869321D6B8A7900FCD9AC /* appleiphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7869221D6B8A7900FCD9AC /* appleiphone.jpg */; };
@@ -55,6 +53,10 @@
 		AA982EBF1D8AFC860098CCDD /* AddProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA982EBD1D8AFC860098CCDD /* AddProductViewController.m */; };
 		AA982EC01D8AFC860098CCDD /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA982EBE1D8AFC860098CCDD /* AddProductViewController.xib */; };
 		AAA38C481D5BBB7200C5E310 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA38C471D5BBB7200C5E310 /* WebKit.framework */; };
+		AAAB49B91DCA909D00097A3D /* ManagedCompany+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB49B21DCA909D00097A3D /* ManagedCompany+CoreDataClass.m */; };
+		AAAB49BA1DCA909D00097A3D /* ManagedCompany+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB49B41DCA909D00097A3D /* ManagedCompany+CoreDataProperties.m */; };
+		AAAB49BB1DCA909D00097A3D /* ManagedProduct+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB49B61DCA909D00097A3D /* ManagedProduct+CoreDataClass.m */; };
+		AAAB49BC1DCA909D00097A3D /* ManagedProduct+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB49B81DCA909D00097A3D /* ManagedProduct+CoreDataProperties.m */; };
 		AAEA4BE71D6DEC76007B619E /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA4BE61D6DEC76007B619E /* DAO.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
@@ -92,10 +94,6 @@
 		48A656E918163F8700746D36 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductViewController.m; path = ../ProductViewController.m; sourceTree = "<group>"; };
 		48A656ED1816468000746D36 /* Sunflower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Sunflower.gif; sourceTree = "<group>"; };
 		4908C2691DB56D9D00C7E54A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		4908C26B1DB571A400C7E54A /* Product+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Product+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4908C26C1DB571A400C7E54A /* Product+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Product+CoreDataProperties.m"; sourceTree = "<group>"; };
-		4908C26D1DB571A400C7E54A /* Company+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Company+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4908C26E1DB571A400C7E54A /* Company+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Company+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4996B7831DAECECD002A7982 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AA7869211D6B8A7900FCD9AC /* appleipad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = appleipad.gif; path = "Images.xcassets/Product Images/appleipad.gif"; sourceTree = "<group>"; };
 		AA7869221D6B8A7900FCD9AC /* appleiphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = appleiphone.jpg; path = "Images.xcassets/Product Images/appleiphone.jpg"; sourceTree = "<group>"; };
@@ -130,6 +128,14 @@
 		AA982EBD1D8AFC860098CCDD /* AddProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductViewController.m; sourceTree = "<group>"; };
 		AA982EBE1D8AFC860098CCDD /* AddProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		AAA38C471D5BBB7200C5E310 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AAAB49B11DCA909D00097A3D /* ManagedCompany+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ManagedCompany+CoreDataClass.h"; path = "../ManagedCompany+CoreDataClass.h"; sourceTree = "<group>"; };
+		AAAB49B21DCA909D00097A3D /* ManagedCompany+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ManagedCompany+CoreDataClass.m"; path = "../ManagedCompany+CoreDataClass.m"; sourceTree = "<group>"; };
+		AAAB49B31DCA909D00097A3D /* ManagedCompany+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ManagedCompany+CoreDataProperties.h"; path = "../ManagedCompany+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AAAB49B41DCA909D00097A3D /* ManagedCompany+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ManagedCompany+CoreDataProperties.m"; path = "../ManagedCompany+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AAAB49B51DCA909D00097A3D /* ManagedProduct+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ManagedProduct+CoreDataClass.h"; path = "../ManagedProduct+CoreDataClass.h"; sourceTree = "<group>"; };
+		AAAB49B61DCA909D00097A3D /* ManagedProduct+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ManagedProduct+CoreDataClass.m"; path = "../ManagedProduct+CoreDataClass.m"; sourceTree = "<group>"; };
+		AAAB49B71DCA909D00097A3D /* ManagedProduct+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ManagedProduct+CoreDataProperties.h"; path = "../ManagedProduct+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AAAB49B81DCA909D00097A3D /* ManagedProduct+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ManagedProduct+CoreDataProperties.m"; path = "../ManagedProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AAEA4BE51D6DEC76007B619E /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
 		AAEA4BE61D6DEC76007B619E /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +231,14 @@
 		48A656BA18163BF200746D36 /* NavCtrl */ = {
 			isa = PBXGroup;
 			children = (
+				AAAB49B11DCA909D00097A3D /* ManagedCompany+CoreDataClass.h */,
+				AAAB49B21DCA909D00097A3D /* ManagedCompany+CoreDataClass.m */,
+				AAAB49B31DCA909D00097A3D /* ManagedCompany+CoreDataProperties.h */,
+				AAAB49B41DCA909D00097A3D /* ManagedCompany+CoreDataProperties.m */,
+				AAAB49B51DCA909D00097A3D /* ManagedProduct+CoreDataClass.h */,
+				AAAB49B61DCA909D00097A3D /* ManagedProduct+CoreDataClass.m */,
+				AAAB49B71DCA909D00097A3D /* ManagedProduct+CoreDataProperties.h */,
+				AAAB49B81DCA909D00097A3D /* ManagedProduct+CoreDataProperties.m */,
 				4908C2671DB56D5C00C7E54A /* Core Data */,
 				AA982EC21D8AFCA40098CCDD /* AddCompanyViewController */,
 				AA982EC11D8AFC8F0098CCDD /* AddProductViewController */,
@@ -292,10 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				4908C2681DB56D9D00C7E54A /* Model.xcdatamodeld */,
-				4908C26D1DB571A400C7E54A /* Company+CoreDataProperties.h */,
-				4908C26E1DB571A400C7E54A /* Company+CoreDataProperties.m */,
-				4908C26B1DB571A400C7E54A /* Product+CoreDataProperties.h */,
-				4908C26C1DB571A400C7E54A /* Product+CoreDataProperties.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -378,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = qcdDemo;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Aditya Narayan";
 				TargetAttributes = {
 					48A656CB18163BF200746D36 = {
@@ -456,16 +466,18 @@
 				AA982EBF1D8AFC860098CCDD /* AddProductViewController.m in Sources */,
 				AA982EBA1D8AFC3D0098CCDD /* AddCompanyViewController.m in Sources */,
 				48A656E618163C1B00746D36 /* CompanyViewController.m in Sources */,
+				AAAB49BA1DCA909D00097A3D /* ManagedCompany+CoreDataProperties.m in Sources */,
 				AA96D2671D5CF340000BAD29 /* WebViewController.m in Sources */,
 				48A656C518163BF200746D36 /* NavControllerAppDelegate.m in Sources */,
+				AAAB49B91DCA909D00097A3D /* ManagedCompany+CoreDataClass.m in Sources */,
 				AA78694B1D6B9CA300FCD9AC /* Product.m in Sources */,
 				AAEA4BE71D6DEC76007B619E /* DAO.m in Sources */,
 				48A656C118163BF200746D36 /* main.m in Sources */,
 				48A656EB18163F8700746D36 /* ProductViewController.m in Sources */,
+				AAAB49BB1DCA909D00097A3D /* ManagedProduct+CoreDataClass.m in Sources */,
 				4908C26A1DB56D9D00C7E54A /* Model.xcdatamodeld in Sources */,
 				AA78694E1D6B9CB800FCD9AC /* Company.m in Sources */,
-				4908C26F1DB571A400C7E54A /* Product+CoreDataProperties.m in Sources */,
-				4908C2701DB571A400C7E54A /* Company+CoreDataProperties.m in Sources */,
+				AAAB49BC1DCA909D00097A3D /* ManagedProduct+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,14 +532,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -540,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -560,20 +577,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -591,6 +613,7 @@
 				INFOPLIST_FILE = "NavCtrl/NavCtrl-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "qcd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -606,6 +629,7 @@
 				INFOPLIST_FILE = "NavCtrl/NavCtrl-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "qcd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
